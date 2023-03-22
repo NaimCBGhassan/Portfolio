@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+
+:root {
+  min-height: 100h;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+input {
+  border: none;
+}
+
+/** PROJECT STYLES **/
+#root {
+  min-height: 100vh;
+  background-color: #00000099;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+body {
+  background: url(../public/Fondo.jpg) no-repeat fixed;
+  background-size: cover;
+  background-position: center;
+  overflow: overlay;
+  cursor: url(../public/cursor.png), auto;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 0.3vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 5px;
+}
+
+/* .butoon {
+  background-color: #e91e6380;
+  margin: 5rem;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff90;
+  box-shadow: 2px 2px 5px #66666680;
+}
+.butoon1 {
+  background-color: #57acdc80;
+  margin: 5rem;
+  width: 100px;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff95;
+  box-shadow: 2px 3px 4px #66666690;
+} */
