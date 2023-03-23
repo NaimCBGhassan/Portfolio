@@ -43,7 +43,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 8vh;
-  background-color: #e91e6333;
+  background-color: #e91e63;
   box-shadow: 2px 0 5px #66666680;
   font-size: 1.2rem;
   color: #ffffff;

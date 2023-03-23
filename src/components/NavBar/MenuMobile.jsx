@@ -41,9 +41,9 @@ const Enlaces = styled.a`
   text-align: center;
 
   :nth-child(odd) {
-    background-color: #55555540;
+    background-color: #222222;
   }
   :nth-child(even) {
-    background-color: #55555515;
+    background-color: #111111;
   }
 `;

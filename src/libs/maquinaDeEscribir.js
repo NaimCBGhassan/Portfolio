@@ -1,21 +1,36 @@
-const maquinaEscribir3 = (text = "", tiempo = 200, etiqueta = "") => {
-  let $etiqueta = document.createElement("p");
-  let arrayCaracteres = text.split("");
-  etiqueta.innerHTML = "";
+function esperar(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function miFuncion() {
+  await esperar(2000);
+}
+
+export const maquinaEscribir = (text1 = "", setText, tiempo) => {
+  let arrayCaracteres = text1.split("");
+  let textReturned = "";
   let i = 0;
-  let j = text.length;
-  let escribir = setInterval(function () {
+  let j = text1.length;
+  let flag = true;
+  return setInterval(async function () {
     if (i === arrayCaracteres.length) {
-      etiqueta.innerHTML = text.substring(0, j);
+      if (flag) {
+        await miFuncion();
+        flag = false;
+      }
+      textReturned = text1.substring(0, j);
       j--;
       if (j === 0) {
-        etiqueta.innerHTML = "";
+        textReturned = "";
         i = 0;
-        j = text.length;
+        j = text1.length;
+        flag = true;
       }
+      setText(textReturned);
     } else {
-      etiqueta.innerHTML += arrayCaracteres[i];
+      textReturned += arrayCaracteres[i];
       i++;
+      setText(textReturned);
     }
   }, tiempo);
 };
