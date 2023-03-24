@@ -3,7 +3,6 @@ import styled from "styled-components";
 import GitHub from "../../assets/GitHub";
 import LinkedIn from "../../assets/LinkedIn";
 import { maquinaEscribir } from "../../libs/maquinaDeEscribir";
-import Button from "@mui/material/Button";
 import ScrollDialog from "./CV";
 
 export const Home = () => {
@@ -17,7 +16,7 @@ export const Home = () => {
   return (
     <>
       <StyledHome id="Home">
-        <h2>
+        <TextAndIcons>
           <div>
             <a href="https://github.com/NaimCBGhassan" target="_blank " rel="noopener noreferrer">
               <GitHub size="45px" />
@@ -28,9 +27,9 @@ export const Home = () => {
           </div>
           <Texto>
             <span>{text}</span>
-            <Button onClick={() => setOpen(true)}>VER CV</Button>
+            <Button onClick={() => setOpen(true)}>CV PREVIEW</Button>
           </Texto>
-        </h2>
+        </TextAndIcons>
         <Cubo className="espacio3D">
           <div className="cubo3D">
             <aside className="cara cara1"></aside>
@@ -48,47 +47,44 @@ export const Home = () => {
 };
 
 const StyledHome = styled.section`
-  min-height: 92vh;
+  height: 92vh;
   color: white;
   padding: 5rem;
   display: flex;
   text-align: center;
-  border-bottom: solid 2px #e91e63;
-
-  h2 {
-    font-size: 35px;
-    width: 50%;
-    line-height: 3.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      gap: 2rem;
-      margin-bottom: 1.2rem;
-      color: #57acdc99;
-      a:hover {
-        color: #57acdc;
-        transform: scale(1.15);
-      }
-    }
-  }
+  align-items: center;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-    h2 {
-      height: 50vh;
-      width: 100%;
-      text-align: center;
-      font-size: 8vw;
-      line-height: 9vw;
+  }
+`;
+
+const TextAndIcons = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #57acdc99;
+    a:hover {
+      color: #57acdc;
+      transform: scale(1.15);
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: 50vh;
+    width: 100%;
   }
 `;
 
@@ -97,24 +93,43 @@ const Texto = styled.p`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 60%;
+  height: 70%;
+  width: 75%;
+  font-size: 45px;
+  line-height: 4.5rem;
 
   span {
     flex: 1;
   }
-  button {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-    background-color: transparent;
-    padding: 1rem;
-    border: solid 2px #e91e63;
-    border-radius: 0.5rem;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    font-size: 6vw;
+    line-height: 6vw;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 6vw;
+    line-height: 7vw;
+    height: 55%;
+  }
+  @media screen and (max-width: 428px) {
+    font-size: 8vw;
+    line-height: 10vw;
+    height: 62%;
+  }
+`;
 
-    &:hover {
-      color: #ffffff;
-      background-color: #e91e63;
-    }
+const Button = styled.button`
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 1rem;
+  border: solid 2px #e91e63;
+  border-radius: 0.5rem;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #e91e63;
   }
 `;
 

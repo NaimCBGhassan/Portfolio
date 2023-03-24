@@ -43,9 +43,9 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 8vh;
-  background-color: #e91e63;
+  background-color: #e91e6395;
   box-shadow: 2px 0 5px #66666680;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: #ffffff;
   padding: 0 0 0 2rem;
 
@@ -78,7 +78,7 @@ const Enlaces = styled.a`
   transition: all 0.25s ease-in-out;
 
   &:hover {
-    font-size: 1.4rem;
+    font-size: 1.75rem;
     background-color: #e91e6350;
   }
 `;
