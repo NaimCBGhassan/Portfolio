@@ -3,11 +3,9 @@ import styled from "styled-components";
 import GitHub from "../../assets/GitHub";
 import LinkedIn from "../../assets/LinkedIn";
 import { maquinaEscribir } from "../../libs/maquinaDeEscribir";
-import ScrollDialog from "./CV";
 
 export const Home = () => {
   const [text, setText] = useState("");
-  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     let escribir = maquinaEscribir("Hi! I’m Naim and I develop FullStack Web Applications", setText, 80);
@@ -27,7 +25,7 @@ export const Home = () => {
           </div>
           <Texto>
             <span>{text}</span>
-            <Button onClick={() => setOpen(true)}>CV PREVIEW</Button>
+            <Button>CV PREVIEW</Button>
           </Texto>
         </TextAndIcons>
         <Cubo className="espacio3D">
@@ -41,13 +39,12 @@ export const Home = () => {
           </div>
         </Cubo>
       </StyledHome>
-      {open && <ScrollDialog open={open} setOpen={setOpen} />}
     </>
   );
 };
 
 const StyledHome = styled.section`
-  height: 92vh;
+  height: 100vh;
   color: white;
   padding: 5rem;
   display: flex;

@@ -45,11 +45,11 @@ input {
 }
 
 body {
-  background: url(../public/Fondo.jpg) no-repeat fixed;
+  background: url(/Fondo.jpg) no-repeat fixed;
   background-size: cover;
   background-position: center;
   overflow: overlay;
-  cursor: url(../public/cursor.png), auto;
+  cursor: url(/cursor.png), auto;
 }
 
 .App {
