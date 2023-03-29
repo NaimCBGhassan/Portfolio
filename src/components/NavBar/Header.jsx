@@ -27,7 +27,7 @@ export const Header = () => {
         <div>
           <Enlaces href="#Home">Home</Enlaces>
           <Enlaces href="#About">About</Enlaces>
-          <Enlaces href="#Portfolio">Portfolio</Enlaces>
+          <Enlaces href="#Porfolio">Porfolio</Enlaces>
           <Enlaces href="#Contact">Contact</Enlaces>
         </div>
       )}
@@ -43,9 +43,9 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 8vh;
-  background-color: #e91e6395;
+  background-color: rgba(233, 30, 99, 0.95);
   box-shadow: 2px 0 5px #66666680;
-  font-size: 1.6rem;
+  font-size: 1.25rem;
   color: #ffffff;
   padding: 0 0 0 2rem;
 
@@ -78,8 +78,10 @@ const Enlaces = styled.a`
   transition: all 0.25s ease-in-out;
 
   &:hover {
-    font-size: 1.75rem;
-    background-color: #e91e6350;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e91e63;
+    background-color: #aaaaaa;
   }
 `;
 

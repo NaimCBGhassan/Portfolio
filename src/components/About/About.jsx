@@ -17,7 +17,7 @@ export const About = () => {
           personal and professional life. */}
         </p>
       </Text>
-      <Image src="./src/assets/FotoPefil.jpeg" alt="Pesonal Photo" />
+      <Image src="/FotoPefil.jpeg" alt="Pesonal Photo" />
       <Carousel />
     </StyledAbout>
   );

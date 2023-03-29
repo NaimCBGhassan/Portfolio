@@ -1,14 +1,20 @@
 import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+
 import styled from "styled-components";
 import GitHub from "../../assets/GitHub";
 import LinkedIn from "../../assets/LinkedIn";
 import { maquinaEscribir } from "../../libs/maquinaDeEscribir";
+import CV from "./CV";
 
 export const Home = () => {
   const [text, setText] = useState("");
+  const [open, setOpen] = useState(false);
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   useEffect(() => {
     let escribir = maquinaEscribir("Hi! I’m Naim and I develop FullStack Web Applications", setText, 80);
+    return () => clearInterval(escribir);
   }, []);
 
   return (
@@ -25,7 +31,12 @@ export const Home = () => {
           </div>
           <Texto>
             <span>{text}</span>
-            <Button>CV PREVIEW</Button>
+            {!isTabletOrMobile && <Button onClick={() => setOpen(true)}>CV PREVIEW</Button>}
+            {isTabletOrMobile && (
+              <a href="/src/assets/CV.pdf" download="CV-NaimChaya">
+                <Button>DOWLOAD CV</Button>
+              </a>
+            )}
           </Texto>
         </TextAndIcons>
         <Cubo className="espacio3D">
@@ -39,6 +50,7 @@ export const Home = () => {
           </div>
         </Cubo>
       </StyledHome>
+      {open && !isTabletOrMobile && <CV open={open} setOpen={setOpen} />}
     </>
   );
 };
