@@ -32,10 +32,10 @@ export const Contact = () => {
   return (
     <StyledPorfolio id="Contact">
       {CardInfo.map((info, index) => (
-        <div key={index} href={info.contact} target="_blank " rel="noopener noreferrer">
+        <a key={index} href={info.contact} target="_blank " rel="noopener noreferrer">
           <p>{info.icon}</p>
           <p>{info.name}</p>
-        </div>
+        </a>
       ))}
     </StyledPorfolio>
   );
