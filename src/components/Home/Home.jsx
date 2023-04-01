@@ -25,7 +25,7 @@ export const Home = () => {
             <a href="https://github.com/NaimCBGhassan" target="_blank " rel="noopener noreferrer">
               <GitHub size="20px" />
             </a>
-            <a href="https://www.linkedin.com/in/naim-chaya-06a16426b" target="_blank " rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/naimchaya" target="_blank " rel="noopener noreferrer">
               <LinkedIn size="20px" />
             </a>
           </div>
@@ -33,7 +33,7 @@ export const Home = () => {
             <span>{text}</span>
             {!isTabletOrMobile && <Button onClick={() => setOpen(true)}>CV PREVIEW</Button>}
             {isTabletOrMobile && (
-              <a href="/src/assets/CV.pdf" download="CV-NaimChaya">
+              <a href="/CV.pdf" download="CV-NaimChaya">
                 <Button>DOWNLOAD CV</Button>
               </a>
             )}

@@ -6,7 +6,7 @@ const size = "30px";
 const CardInfo = [
   {
     name: "LinkedIn",
-    contact: "https://www.linkedin.com/in/naim-chaya-06a16426b",
+    contact: "https://www.linkedin.com/in/naimchaya",
     icon: <SiLinkedin size={size} />,
   },
   {

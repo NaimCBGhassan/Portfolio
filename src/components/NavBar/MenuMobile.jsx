@@ -7,7 +7,7 @@ const MenuMobile = ({ menuMobile }) => {
         Home
       </Enlaces>
       <Enlaces href="#About">About</Enlaces>
-      <Enlaces href="#Portfolio">Portfolio</Enlaces>
+      <Enlaces href="#Porfolio">Portfolio</Enlaces>
       <Enlaces href="#Contact">Contact</Enlaces>
     </StyledMenuMobile>
   );
@@ -27,6 +27,7 @@ const StyledMenuMobile = styled.nav`
   flex-direction: column;
   width: 100vw;
   transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  background: #222222;
 
   &.menuMobileInactive {
     bottom: -245px;

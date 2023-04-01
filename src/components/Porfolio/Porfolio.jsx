@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import GitHub from "../../assets/GitHub";
-import { MdWebAsset } from "react-icons/md";
+import { CgBrowser } from "react-icons/cg";
 import { useState } from "react";
-import LinkedIn from "../../assets/LinkedIn";
+import Modal from "./Modal";
 
 const CardInfo = [
   {
@@ -11,85 +11,88 @@ const CardInfo = [
     url: "https://onlineshopmernproject.netlify.app/",
     gitHub: "https://github.com/NaimCBGhassan/OnlineShop",
     description: "OnlineShop is a place where you will be able to find the best phones at the lowest price",
+    user: "Admin1",
+    password: "Admin1",
   },
   {
     title: "AuthJWT",
     path: "/Auth.jpg",
     url: "https://naimchaya-authjwt.up.railway.app/",
     gitHub: "https://github.com/NaimCBGhassan/2-mern-JWT",
-    description: "",
+    description:
+      "AuthJWT is a page where you can register or login and your sensitive data will be protected for JWT system",
+    user: "Admin",
+    password: "Admin",
   },
   {
     title: "FormuPics",
     path: "/FormuPics.jpg",
     url: "https://formupics-project.up.railway.app/",
     gitHub: "https://github.com/NaimCBGhassan/FormuPics",
-    description: "",
+    description: "FormuPics is a page where you can create, update and delete a post.",
   },
   {
     title: "Taller de Maquetación",
     path: "/TallerDeMaquetacion.jpg",
     url: "https://naimcbghassan.github.io/taller-maquetacion/portafolio-cv/",
     gitHub: "https://github.com/NaimCBGhassan/taller-maquetacion",
-    description: "",
+    description: "Taller de maquetacion is a project where you can find my (fictitious) information",
   },
   {
     title: "Coffee Blog",
     path: "/CoffeeBlog.jpg",
     url: "https://naimchaya-coffee-blog.netlify.app/",
     gitHub: "https://github.com/NaimCBGhassan/Blog-de-cafe",
-    description: "",
+    description: "Hi! Welcome to the best Coffee Blog with courses and tips for drinking coffee",
   },
   {
     title: "FrontEnd Store",
     path: "/FrontendStore.jpg",
     url: "https://naimchaya-frontend-store.netlify.app/",
     gitHub: "https://github.com/NaimCBGhassan/FrontEnd-Store",
-    description: "",
+    description: "Hi! This a Online Store created for the sale of developer T-shirts",
   },
   {
     title: "Freelancer Developer",
     path: "/FreelancerDeveloper.jpg",
     url: "https://naimchaya-freelancer.netlify.app/",
     gitHub: "https://github.com/NaimCBGhassan/FreelancerDeveloper",
-    description: "",
+    description: "Hi! I'm Naim Chaya, Freelancer web developer",
   },
 ];
 
 export const Porfolio = () => {
   const [hover, setHover] = useState(null);
+  const [open, setOpen] = useState(false);
 
-  const handleHover = () => {};
+  const handleClick = (card) => {
+    setOpen(card);
+  };
 
   return (
-    <StyledPorfolio id="Porfolio">
-      <Title>PROJECTS</Title>
-      <CardsContainer>
-        {CardInfo.map((card, index) => {
-          return (
-            <Card key={index} href={card.url}>
-              <ImageContainer onMouseOut={() => setHover(null)} onMouseOver={() => setHover(index)}>
-                {/* <div>{index === hover && <Description> {card.description} </Description>}</div> */}
-                <Image src={card.path} alt={card.title} />
-              </ImageContainer>
-              <TextContainer>
-                <h4>
-                  <i>{card.title}</i>
-                </h4>
-                <div>
-                  <a href="https://github.com/NaimCBGhassan" target="_blank " rel="noopener noreferrer">
-                    <GitHub size="20px" />
-                  </a>
-                  <a href="https://www.linkedin.com/in/naim-chaya-06a16426b" target="_blank " rel="noopener noreferrer">
-                    <LinkedIn size="20px" />
-                  </a>
-                </div>
-              </TextContainer>
-            </Card>
-          );
-        })}
-      </CardsContainer>
-    </StyledPorfolio>
+    <>
+      <StyledPorfolio id="Porfolio">
+        <Title>PROJECTS</Title>
+        <CardsContainer>
+          {CardInfo.map((card, index) => {
+            return (
+              <Card key={index} href={card.url} onClick={() => handleClick(card)}>
+                <ImageContainer onMouseOut={() => setHover(null)} onMouseOver={() => setHover(index)}>
+                  <div>{index === hover && <Description> {card.description} </Description>}</div>
+                  <Image src={card.path} alt={card.title} />
+                </ImageContainer>
+                <TextContainer>
+                  <h4>
+                    <i>{card.title}</i>
+                  </h4>
+                </TextContainer>
+              </Card>
+            );
+          })}
+        </CardsContainer>
+      </StyledPorfolio>
+      {open && <Modal open={open} setOpen={setOpen} />}
+    </>
   );
 };
 
@@ -186,7 +189,7 @@ const ImageContainer = styled.div`
 const Description = styled.p`
   height: 100%;
   padding: 1.8rem;
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   line-height: 2.5rem;
 `;
 
