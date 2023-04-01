@@ -5,7 +5,7 @@ export const About = () => {
   return (
     <StyledAbout id="About">
       <Text>
-        <h3>I'm Full Stack MERN developer & Civil Engeneer</h3>
+        <h3>I'm Full Stack MERN developer & Civil Engineer</h3>
         <p>
           I started my path in web development in the year 2021 while completing my university studies. I have carried
           out many personal projects along this beautiful journey. These projects that I have done have improved my
