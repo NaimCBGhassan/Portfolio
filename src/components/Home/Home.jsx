@@ -34,7 +34,7 @@ export const Home = () => {
             {!isTabletOrMobile && <Button onClick={() => setOpen(true)}>CV PREVIEW</Button>}
             {isTabletOrMobile && (
               <a href="/CV.pdf" download="CV-NaimChaya">
-                <Button>DOWNLOAD CV</Button>
+                <Button>DOWNLOAD RESUME</Button>
               </a>
             )}
           </Texto>

@@ -27,7 +27,7 @@ export default function CV({ open, setOpen }) {
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
       >
-        <DialogTitle id="scroll-dialog-title">CV PREVIEW</DialogTitle>
+        <DialogTitle id="scroll-dialog-title">RESUME PREVIEW</DialogTitle>
         <DialogContent dividers={scroll === "paper"}>
           <embed src="/CV.pdf" type="application/pdf" width="500px" height="500px" />
         </DialogContent>
