@@ -23,10 +23,10 @@ export const Home = () => {
         <TextAndIcons>
           <div>
             <a href="https://github.com/NaimCBGhassan" target="_blank " rel="noopener noreferrer">
-              <GitHub size="45px" />
+              <GitHub size="20px" />
             </a>
             <a href="https://www.linkedin.com/in/naim-chaya-06a16426b" target="_blank " rel="noopener noreferrer">
-              <LinkedIn size="45px" />
+              <LinkedIn size="20px" />
             </a>
           </div>
           <Texto>
@@ -34,7 +34,7 @@ export const Home = () => {
             {!isTabletOrMobile && <Button onClick={() => setOpen(true)}>CV PREVIEW</Button>}
             {isTabletOrMobile && (
               <a href="/src/assets/CV.pdf" download="CV-NaimChaya">
-                <Button>DOWLOAD CV</Button>
+                <Button>DOWNLOAD CV</Button>
               </a>
             )}
           </Texto>
@@ -82,11 +82,20 @@ const TextAndIcons = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    gap: 2.5rem;
+    gap: 1rem;
     margin-bottom: 1.5rem;
-    color: #57acdc99;
+
+    a {
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      background-color: #57acdc99;
+      height: 2rem;
+      width: 2.8rem;
+      border-radius: 0.2rem;
+    }
+
     a:hover {
-      color: #57acdc;
       transform: scale(1.15);
     }
   }

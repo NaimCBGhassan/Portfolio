@@ -29,7 +29,7 @@ export default function CV({ open, setOpen }) {
       >
         <DialogTitle id="scroll-dialog-title">CV PREVIEW</DialogTitle>
         <DialogContent dividers={scroll === "paper"}>
-          <embed src="/public/CV.pdf" type="application/pdf" width="500px" height="500px" />
+          <embed src="/CV.pdf" type="application/pdf" width="500px" height="500px" />
         </DialogContent>
         <DialogActions>
           <Button onClick={() => setOpen(false)}>Cancel</Button>
