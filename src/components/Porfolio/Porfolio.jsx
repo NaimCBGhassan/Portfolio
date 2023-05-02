@@ -15,6 +15,13 @@ const CardInfo = [
     password: "Admin1",
   },
   {
+    title: "FinanceDashboard",
+    path: "/finance.png",
+    url: "https://financedashboardnc.netlify.app/",
+    gitHub: "https://github.com/NaimCBGhassan/Finance-Dashboard",
+    description: "This is a panel where you will be able to find your business metrics and analytics.",
+  },
+  {
     title: "AuthJWT",
     path: "/Auth.jpg",
     url: "https://naimchaya-authjwt.up.railway.app/",

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-const MenuMobile = ({ menuMobile }) => {
+const MenuMobile = ({ menuMobile, setMenuMobile }) => {
   return (
-    <StyledMenuMobile className={!menuMobile ? "menuMobileInactive" : null}>
+    <StyledMenuMobile className={!menuMobile ? "menuMobileInactive" : null} onClick={() => setMenuMobile(false)}>
       <Enlaces href="#Home" className="">
         Home
       </Enlaces>

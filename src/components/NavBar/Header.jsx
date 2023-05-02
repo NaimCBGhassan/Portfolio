@@ -21,7 +21,7 @@ export const Header = () => {
           <Button onClick={() => setMenuMobile(!menuMobile)}>
             <MenuHamburgesa />
           </Button>
-          <MenuMobile menuMobile={menuMobile} />
+          <MenuMobile menuMobile={menuMobile} setMenuMobile={setMenuMobile} />
         </>
       ) : (
         <div>
