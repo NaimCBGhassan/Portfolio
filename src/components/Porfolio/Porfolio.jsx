@@ -22,6 +22,13 @@ const CardInfo = [
     description: "This is a panel where you will be able to find your business metrics and analytics.",
   },
   {
+    title: "ApiRest",
+    path: "/ApiRest.jpg",
+    url: "https://api-rest-nc.up.railway.app/",
+    gitHub: "https://github.com/NaimCBGhassan/ApiRest",
+    description: "A ApiRest where you will find 3 endpoint (Item, Auth & Orders)",
+  },
+  {
     title: "AuthJWT",
     path: "/Auth.jpg",
     url: "https://naimchaya-authjwt.up.railway.app/",
