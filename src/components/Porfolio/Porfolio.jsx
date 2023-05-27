@@ -6,6 +6,13 @@ import Modal from "./Modal";
 
 const CardInfo = [
   {
+    title: "MoonFlix",
+    path: "/moonflix.jpg.jpg",
+    url: "https://moonflixngc.netlify.app/",
+    gitHub: "https://github.com/NaimCBGhassan/Movies",
+    description: "MoonFlix is website where you will be able to see all of you favorites movies and TV series",
+  },
+  {
     title: "OnlineShop",
     path: "/OnlineShop.jpg",
     url: "https://onlineshopmernproject.netlify.app/",
