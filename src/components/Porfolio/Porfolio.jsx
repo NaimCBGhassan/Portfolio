@@ -7,7 +7,7 @@ import Modal from "./Modal";
 const CardInfo = [
   {
     title: "MoonFlix",
-    path: "/moonflix.jpg.jpg",
+    path: "/moonflix.jpg",
     url: "https://moonflixngc.netlify.app/",
     gitHub: "https://github.com/NaimCBGhassan/Movies",
     description: "MoonFlix is website where you will be able to see all of you favorites movies and TV series",
